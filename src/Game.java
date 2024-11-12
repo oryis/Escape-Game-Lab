@@ -23,7 +23,7 @@ public class Game {
 		System.out.println(obj.toString());
 	}
 
-	public static Item getItemFromInventory(String itemName) {
+	public static Item getInventory(String itemName) {
 		return inventory.get(itemName);
 	}
 
@@ -54,7 +54,7 @@ public class Game {
 						// Check if the player has the key
 						Item key = inventory.get("key");
 						if (key != null) {
-							// Unlock the room and proceed
+							// Unlock the locked room
 							nextRoom.setLocked(false);
 							System.out.println("You used the key to unlock the room.");
 							currentRoom = nextRoom;
@@ -128,4 +128,3 @@ public class Game {
 	}
 
 }
-

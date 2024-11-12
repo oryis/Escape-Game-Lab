@@ -1,4 +1,5 @@
 public class Combination extends Item {
+
 	private String combinationCode;
 
 	public Combination(String name, String description, String combinationCode) {
@@ -12,8 +13,6 @@ public class Combination extends Item {
 
 	@Override
 	public void use() {
-		Game.print("Use this combination to open a specific safe.");
+		System.out.println("Use this combination to open a specific safe.");
 	}
 }
-
-

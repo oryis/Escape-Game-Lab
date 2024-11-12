@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Item {
 
 	private static String name;
@@ -38,5 +40,15 @@ public class Item {
 	public void open() {
 		Game.print("You can't open that.");
 
+	}
+
+	public void open(HashMap<String, Item> inventory) {
+		// 
+		
+	}
+
+	public void put(String string, Item item) {
+		
+		
 	}
 }

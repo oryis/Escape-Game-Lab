@@ -1,33 +1,37 @@
-public class Safe extends Item {
-    
+public class Safe extends Combination {
+
 	private boolean isOpen;
-    private String combination;
+	private String combination;
 
-    public Safe(String name, String description,String combination) {
-        super(name, description);
-        this.combination = combination;
-        isOpen = false;
-    }
+	public Safe(String name, String description, String combination) {
+		super(name, description, combination);
+		this.combination = combination;
+		isOpen = false;
+	}
 
-    @Override
-    public void open() {
-        if (!isOpen) {
-            Item combinationItem = Game.getItemFromInventory("combination");
-            if (combinationItem != null) {
-                Combination combinationItemCast = (Combination) combinationItem;
-                if (combinationItemCast.getCombinationCode().equals(this.combination)) {
-                    isOpen = true;
-                    Game.print("Using the combination, you open the safe and find a diamond inside! Naturally, you pocket the diamond.");
-                    Game.getInventory().put("diamond", new Item("diamond", "A sparkling diamond"));
-                } else {
-                    Game.print("The combination is incorrect.");
-                }
-            } else {
-                Game.print("You don't have the combination.");
-            }
-        } else {
-            Game.print("The safe is already open.");
-        }
-    }
+	@Override
+	public void open() {
+		if (!isOpen) {
+			Item combinationItem = getInventory("combination");
+			if (getCombinationCode() != null) {
+				Combination combinationCode = (Combination) combinationItem;
+				if (combinationCode.getCombinationCode().equals(this.combination)) {
+					isOpen = true;
+					System.out.println("YAYY CONGRATS! you find the sparkling diamond inside! and picked it up.");
+					getInventory(combination).put("diamond", new Item("diamond", "A sparkling diamond"));
+				} else {
+					System.out.println("The combination is incorrect.");
+				}
+			} else {
+				System.out.println("You don't have the combination.");
+			}
+		} else {
+			System.out.println("The safe is already open.");
+		}
+	}
+
+	private Item getInventory(String string) {
+		
+		return null;
+	}
 }
-
