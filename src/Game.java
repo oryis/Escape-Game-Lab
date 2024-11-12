@@ -115,13 +115,13 @@ public class Game {
 				}
 
 			default:
-				System.out.println("I don't know what you mean.");
+				System.out.println("I don't know what you mean."); // me either girl
 				break;
 			}
 
 			// Update current room after handling direction commands
 
-		} while (!command.equals("x"));
+		} while (!command.equals("x")); //
 
 		input.close();
 

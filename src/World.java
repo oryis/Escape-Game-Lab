@@ -45,6 +45,7 @@ public class World {
 		nursestation.addItem(combination);
 
 		lobby.addExit(suite, 'e'); // lobby connects to patient suite
+		emergency.addExit(lobby, 'd'); // lobby connects to emergency down??
 
 		restRoom.addExit(suite, 's'); // restRoom connects to suite
 		suite.addExit(restRoom, 'n'); // suite connects to restroom

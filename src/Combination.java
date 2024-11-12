@@ -2,9 +2,9 @@ public class Combination extends Item {
 
 	private String combinationCode;
 
-	public Combination(String name, String description, String combinationCode) {
-		super(name, description);
-		this.combinationCode = combinationCode;
+	public Combination(String name, String description, String combinationCode) { // constructor with my three parem
+		super(name, description); // calls item class,
+		this.combinationCode = combinationCode; //store in combination code
 	}
 
 	public String getCombinationCode() {

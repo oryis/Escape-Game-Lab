@@ -18,7 +18,7 @@ public class Safe extends Combination {
 				if (combinationCode.getCombinationCode().equals(this.combination)) { // compares combination with safe
 																						// combination code
 					isOpen = true; // tells u that its open
-					System.out.println("YAYY CONGRATS! you find the sparkling diamond inside! and picked it up.");
+					System.out.println("YAYY CONGRATS! you find the sparkling diamond inside! and picked it up."); // ye u found it
 					getInventory(combination).put("diamond", new Item("diamond", "A sparkling diamond"));
 				} else {
 					System.out.println("The combination is incorrect.");
