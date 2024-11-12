@@ -12,8 +12,8 @@ public class World {
 		Room icu = new Room("icu", "You are in the ICU");
 		Room pediatric = new Room("pediatric", "You are in the Pediatric Room");
 		Room recovery = new Room("recovery", "You are in the Recovery Room");
-		Room emergency= new Room("emergency", "You are in the X-Ray Room");
-		Room isolation= new Room("isolation", "You are in the Isolation Room");
+		Room emergency = new Room("emergency", "You are in the X-Ray Room");
+		Room isolation = new Room("isolation", "You are in the Isolation Room");
 
 		// set items and description
 		Item cabinet = new Item("Cabinet", "A big Brown Cabinet");
@@ -33,7 +33,7 @@ public class World {
 		suite.putItem(notebook);
 		hallway.putItem(map);
 		lobby.putItem(cabinet);
-		
+
 		lobby.putItem(diamond);
 
 		// my safe and combination
