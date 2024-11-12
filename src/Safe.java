@@ -11,12 +11,13 @@ public class Safe extends Combination {
 
 	@Override
 	public void open() {
-		if (!isOpen) {
-			Item combinationItem = getInventory("combination");
-			if (getCombinationCode() != null) {
+		if (!isOpen) { // see if the safe isn't already opened
+			Item combinationItem = getInventory("combination"); // gets combination item from inventory
+			if (getCombinationCode() != null) { // checks if code is null
 				Combination combinationCode = (Combination) combinationItem;
-				if (combinationCode.getCombinationCode().equals(this.combination)) {
-					isOpen = true;
+				if (combinationCode.getCombinationCode().equals(this.combination)) { // compares combination with safe
+																						// combination code
+					isOpen = true; // tells u that its open
 					System.out.println("YAYY CONGRATS! you find the sparkling diamond inside! and picked it up.");
 					getInventory(combination).put("diamond", new Item("diamond", "A sparkling diamond"));
 				} else {
@@ -31,7 +32,7 @@ public class Safe extends Combination {
 	}
 
 	private Item getInventory(String string) {
-		
+
 		return null;
 	}
 }
