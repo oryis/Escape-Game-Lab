@@ -38,7 +38,7 @@ public class World {
 
 		// my safe and combination
 		Safe supplyCabinet = new Safe("Supply Cabinet", "A locked cabinet filled with medical supplies.", "");
-		Combination combination = new Combination("Combination", "A mysterious combination", "4509");
+		Combination combination = new Combination("Combination", "A mysterious combination", "4509"); // did this wrong x.x
 
 		// safe and combination room
 		nursestation.addItem(supplyCabinet);
